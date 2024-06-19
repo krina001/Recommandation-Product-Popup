@@ -77,7 +77,7 @@
 
       function showNextPopup() {
         if (progressComplete) {
-
+        if (jQuery('div').hasClass("product-data")){
             // Move to the next element, and loop back if necessary
             i = (i + 1) % elements.length;
           progressComplete = false;
@@ -106,6 +106,7 @@
           }, remainingTime);
         }
       }
+    }
 
       function startInterval() {
         showNextPopup(); // Start the first popup immediately
